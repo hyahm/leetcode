@@ -16,7 +16,6 @@ package main
 // go test -v -run=TestTwoSumHash leetcode/twosum
 
 import (
-	"fmt"
 	"reflect"
 	"testing"
 )
@@ -39,13 +38,8 @@ func twoSumHash(nums []int, target int) []int {
 	for k, v := range nums {
 		m[v] = k
 	}
-	// 3, 2, 4
 	for i, v := range nums {
-
 		if j, ok := m[target-v]; ok && i != j {
-			fmt.Println("now", target-v)
-			fmt.Println(i, j)
-			fmt.Println([]int{i, j})
 			return []int{i, j}
 		}
 	}
